@@ -1,0 +1,15 @@
+.Navbar{
+    display:flex;
+    align-items: center;
+    background-color: blue;
+    width: 100%;
+    color: white;
+}
+.Logo{
+    width:50%;
+}
+.Links{
+    width: 50%;
+    display:flex;
+    justify-content: space-evenly;
+}
