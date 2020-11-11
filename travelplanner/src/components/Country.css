@@ -1,0 +1,24 @@
+.countryList{
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+    /* flex-direction: column; */
+    flex-wrap:wrap;
+    
+}
+
+.country{
+    width: 25%;
+    height: 30vh;
+    margin: 2%;
+    background-image: url("./Images/blankticket.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.countryName{
+    padding-top: 15%;
+    margin: 1%;
+}
+.countryDetails{
+    margin: 1%;
+}

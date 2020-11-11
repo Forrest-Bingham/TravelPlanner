@@ -13,3 +13,11 @@
     display:flex;
     justify-content: space-evenly;
 }
+.Link{
+    color:white;
+    text-decoration: none;
+}
+.Link:hover{
+    cursor: pointer;
+    color:silver;
+}
