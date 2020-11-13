@@ -58,3 +58,14 @@
     width:30%;
     background-color: white;
 }
+.allSearch{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchForm{
+    width: 100%;
+    height: 15vh;
+    padding-top:5%;
+
+}

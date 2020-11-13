@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
+import axios from "axios"
 import Trip from "./Trip";
 import "./Body.css";
 
@@ -9,11 +10,37 @@ const TravelForm = () => {
 
     const [from, setFrom] = useState("");
     const [to, setTo] = useState("");
-    const [plan, setPlan] = useState([]);
     const [itinerary, setItinerary] = useState([])
+
+   
+    const [searchTo, setSearchFrom] = useState("")
+
+    // useEffect(()=> {
+
+    //     axios
+    //     .get('https://restcountries-v1.p.rapidapi.com/all')
+    //     .then(response => {
+    //         console.log(response.data);
+    //         const place = response.data.filter(paiz =>
+    //             paiz.name.toLowerCase().includes(search.toLowerCase()))
+            
+    //         setFrom(place)
+    //         // if (from != null){
+    //         //     setTo(place)
+    //         // }
+    //         // else {
+    //         //     setFrom(place)
+    //         // }
+    //         console.log(from, "<-- From")
+    //         // console.log(to, "<-- To")
+    //     })
+    //     .catch(error => console.log("Error fetching API", error))
+    // }, [search])
 
     const handleSubmit = e => {
         e.preventDefault();
+        // setSearch(e.target.value)
+        // console.log(search, "<- Search Term")
         trip.start = from
         trip.end = to
         console.log("Trip ", trip)
@@ -22,7 +49,6 @@ const TravelForm = () => {
 
         setFrom(to)
         setTo("")
-        setPlan("")
 
     }
 
