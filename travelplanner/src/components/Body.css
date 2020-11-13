@@ -12,3 +12,60 @@
     width: 90%;
     height: 70vh;
 }
+.planner{
+    width:100%;
+    display:flex;
+}
+.form{
+    width:70%;
+    padding-top:5%;
+    background-color: white;
+    height: 50vh;
+    display:flex;
+    justify-content: space-evenly;
+}
+.from{
+    height:35px;
+    width: 250px;
+    border-radius:25px;
+    font-weight:bold;
+}
+.from:focus{
+    outline:none;
+    background-color: wheat;
+    border:2px solid skyblue;
+}
+.to{
+    height:35px;
+    width: 250px;
+    border-radius:25px;
+    font-weight:bold;
+}
+.to:focus{
+    outline:none;
+    background-color: wheat;
+    border:2px solid skyblue;
+}
+.formButton{
+    width:80px;
+    height:40px;
+    border-radius:25px;
+}
+.formButton:hover{
+    cursor:pointer;
+}
+.itinerary{
+    width:30%;
+    background-color: white;
+}
+.allSearch{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchForm{
+    width: 100%;
+    height: 15vh;
+    padding-top:5%;
+
+}
