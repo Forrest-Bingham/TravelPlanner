@@ -10,6 +10,7 @@ const All = () => {
 
     const [countries, setCountries] = useState([])
     const [search, setSearch] = useState("")
+    const [copy, setCopy] = useState([])
 
     var list = []
 
@@ -22,23 +23,27 @@ const All = () => {
 
     const handleSubmit = event => {
         event.preventDefault()
-        checkForDuplicates(countries)
-        // setSearch(event.target.value);
-        // console.log(search, "<- Search")
-        // const searchCountry = countries.filter(paiz => 
-        //     paiz.name.toLowerCase().includes(search.toLowerCase()))
+        // checkForDuplicates(countries)
+        setSearch(event.target.value);
+        console.log(search, "<- Search")
+        const searchCountry = copy.filter(paiz => 
+        paiz.name.toLowerCase().includes(search.toLowerCase()))
         
-        // setCountries(searchCountry);
+        setCopy(searchCountry);
       };
     useEffect(() => {
         axios
         .get('https://restcountries-v1.p.rapidapi.com/all')
         .then(response => {
-            // console.log(response.data)
+            console.log(response.data)
             // console.log(countries)
             // setCountryList(countries)
             
             setCountries(response.data)
+            console.log("Countries", countries)
+            setCopy(countries)
+            console.log("Copy = ", copy)
+            console.log("API call has been made")
             // const searchCountry = response.data.filter(paiz => 
             //     paiz.name.toLowerCase().includes(search.toLowerCase()))
             
@@ -46,7 +51,7 @@ const All = () => {
             
         })
         .catch(error => console.log(error))
-    }, [search])
+    }, [])
     return(
         <div>
             <Navbar/>
@@ -64,7 +69,7 @@ const All = () => {
             </form>
         </div>
             <div className="countryList">
-            {countries.map(country => {
+            {copy.map(country => {
                 return(
                     <Country
                     key={country.numericCode}
