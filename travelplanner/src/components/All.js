@@ -7,7 +7,7 @@ import "./Country.css"
 
 const All = () => {
     
-    // const [countryList, setCountryList] = useState([])
+
     const [countries, setCountries] = useState([])
     const [search, setSearch] = useState("")
 
